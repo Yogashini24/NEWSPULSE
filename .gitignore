@@ -1,0 +1,10 @@
+
+
+__pycache__/
+*.pyc
+*.pkl
+*.pickle
+*.db
+stopwords/
+models/
+.env

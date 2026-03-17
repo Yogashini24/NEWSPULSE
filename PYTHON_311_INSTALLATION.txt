@@ -1,0 +1,117 @@
+📌 PYTHON 3.11 INSTALLATION COMMANDS FOR WINDOWS
+===============================================
+
+Choose ONE of the methods below (in order of ease):
+
+METHOD 1: Windows Package Manager (EASIEST - Windows 11)
+========================================================
+Open PowerShell as Administrator and run:
+
+    winget install Python.Python.3.11
+
+Then verify:
+    python --version
+
+
+METHOD 2: Chocolatey Package Manager
+====================================
+If you have Chocolatey installed, open PowerShell as Administrator and run:
+
+    choco install python311
+
+Then verify:
+    python --version
+
+
+METHOD 3: Direct Download (Manual)
+==================================
+1. Visit: https://www.python.org/downloads/release/python-3118/
+   (or latest 3.11.x version)
+
+2. Download "Windows installer (64-bit)" 
+
+3. Run the installer
+
+4. ⚠️ IMPORTANT: CHECK THESE OPTIONS:
+   ✓ "Add Python 3.11 to PATH"
+   ✓ "Install pip"
+   ✓ "Install py launcher"
+
+5. Click "Install Now"
+
+6. After installation, restart your terminal/PowerShell
+
+7. Verify:
+    python --version
+
+Should show: Python 3.11.x
+
+
+METHOD 4: Using Python Installer with Flags
+=============================================
+If you download the installer, install via command line:
+
+    python-3.11.8-amd64.exe /quiet InstallAllUsers=1 PrependPath=1
+
+(Replace version number if different)
+
+
+VERIFY INSTALLATION
+===================
+After installation, run in ANY new PowerShell window:
+
+    python --version
+    
+Expected output: Python 3.11.x (where x is minor version)
+
+
+QUICK FIX IF PYTHON NOT FOUND
+=============================
+If you get "python: command not found", add Python to PATH:
+
+1. Open PowerShell as Administrator
+
+2. Run:
+    [Environment]::SetEnvironmentVariable("Path", $env:Path + ";C:\Users\YourUsername\AppData\Local\Programs\Python\Python311", "User")
+
+3. Restart PowerShell
+
+4. Verify again:
+    python --version
+
+
+UPGRADE PIP AFTER INSTALLATION
+==============================
+Once Python 3.11 is installed, upgrade pip:
+
+    python -m pip install --upgrade pip
+
+
+THEN INSTALL NEWSPULSE REQUIREMENTS
+===================================
+    cd "c:\Users\ANANTAN\Desktop\milestone 3"
+    pip install -r requirements.txt
+
+
+RECOMMENDED INSTALLATION ORDER
+==============================
+1. Install Python 3.11 (use Method 1 or 2 if possible)
+2. Verify: python --version
+3. Restart PowerShell
+4. Run: python -m pip install --upgrade pip
+5. Run: pip install -r requirements.txt
+6. Run: python news_scraper.py
+7. Run: python train_model.py
+8. Run: streamlit run app.py
+
+
+STILL NOT WORKING?
+==================
+If Python still doesn't work after installation:
+
+1. Uninstall Python 3.11 completely
+2. Restart your computer
+3. Use Method 1 (winget) or Method 3 (manual)
+4. Check "Add Python to PATH" during installation
+5. After installation, RESTART your terminal
+

@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # NewsPulse - Advanced News Analytics Dashboard
 
 ## 📰 Overview
